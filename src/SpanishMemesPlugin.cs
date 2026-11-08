@@ -38,6 +38,9 @@ public sealed class RandomMemeCommand : PluginDynamicCommand
 
     protected override void RunCommand(string actionParameter) => _ = this.player.PlayAsync();
 
+    protected override BitmapImage GetCommandImage(string actionParameter, PluginImageSize imageSize) =>
+        BitmapImage.FromResource(this.Plugin.Assembly, "Icons.SpanishMemes.svg");
+
     protected override bool ProcessButtonEvent2(string actionParameter, DeviceButtonEvent2 buttonEvent)
     {
         switch (buttonEvent.EventType)

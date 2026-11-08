@@ -2,7 +2,7 @@ type: plugin4
 name: SpanishMemes
 displayName: Spanish Memes
 description: Play a random trending sound from Myinstants Spain.
-version: 0.1.2
+version: 0.1.3
 author: Roberto Huertas
 copyright: Copyright © 2026 Roberto Huertas
 minimumLoupedeckVersion: 6.4

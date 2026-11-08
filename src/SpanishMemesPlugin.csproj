@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="LogiPluginApi" Version="6.4.2.3567" ExcludeAssets="runtime;native" />
+    <EmbeddedResource Include="../package/actionicons/Loupedeck.SpanishMemesPlugin.RandomMemeCommand.svg" LogicalName="Icons.SpanishMemes.svg" />
   </ItemGroup>
   <Target Name="DropPluginApiAnalyzers" BeforeTargets="CoreCompile">
     <ItemGroup><Analyzer Remove="@(Analyzer)" Condition="$([System.String]::Copy('%(Analyzer.Identity)').Contains('/.nuget/packages/'))" /></ItemGroup>
