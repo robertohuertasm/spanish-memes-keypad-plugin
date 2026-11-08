@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - name: Check version
+        run: |
+          manifest=$(sed -n 's/^version:[[:space:]]*//p' package/metadata/LoupedeckPackage.yaml)
+          test "$manifest" = "${GITHUB_REF_NAME#v}"
+      - name: Test playback behavior
+        run: dotnet run --project probes/Probe.csproj -- --behavior
+      - name: Build plugin
+        run: dotnet build src/SpanishMemesPlugin.csproj -c Release
+      - run: dotnet tool install --global LogiPluginTool --version 6.4.2.3599
+      - run: logiplugintool pack build/Release "SpanishMemes_${GITHUB_REF_NAME#v}.lplug4"
+      - run: logiplugintool verify "SpanishMemes_${GITHUB_REF_NAME#v}.lplug4"
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" "SpanishMemes_${GITHUB_REF_NAME#v}.lplug4" --title "$GITHUB_REF_NAME" --generate-notes

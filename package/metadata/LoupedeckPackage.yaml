@@ -1,0 +1,15 @@
+type: plugin4
+name: SpanishMemes
+displayName: Spanish Memes
+description: Play a random trending sound from Myinstants Spain.
+version: 0.1.2
+author: Roberto Huertas
+copyright: Copyright © 2026 Roberto Huertas
+minimumLoupedeckVersion: 6.4
+pluginFileName: SpanishMemesPlugin.dll
+pluginFolderMac: bin
+supportedDevices:
+    - MxCreativeKeypad
+    - LoupedeckCtFamily
+pluginCapabilities:
+license: MIT

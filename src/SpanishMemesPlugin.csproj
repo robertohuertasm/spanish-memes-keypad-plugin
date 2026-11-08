@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Loupedeck.SpanishMemesPlugin</RootNamespace>
+    <AssemblyName>SpanishMemesPlugin</AssemblyName>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>../build/$(Configuration)/bin/</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="LogiPluginApi" Version="6.4.2.3567" ExcludeAssets="runtime;native" />
+  </ItemGroup>
+  <Target Name="DropPluginApiAnalyzers" BeforeTargets="CoreCompile">
+    <ItemGroup><Analyzer Remove="@(Analyzer)" Condition="$([System.String]::Copy('%(Analyzer.Identity)').Contains('/.nuget/packages/'))" /></ItemGroup>
+  </Target>
+  <Target Name="CopyPackage" AfterTargets="Build">
+    <ItemGroup><PackageFiles Include="../package/**/*" /></ItemGroup>
+    <Copy SourceFiles="@(PackageFiles)" DestinationFolder="../build/$(Configuration)/%(RecursiveDir)" SkipUnchangedFiles="true" />
+  </Target>
+</Project>
