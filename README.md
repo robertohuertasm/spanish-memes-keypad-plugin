@@ -1,6 +1,6 @@
 # Spanish Memes for MX Keypad
 
-Un botón para reproducir un sonido aleatorio de las tendencias de Myinstants en España desde el MX Creative Keypad, en macOS.
+Un botón para reproducir un sonido aleatorio de las tendencias de [Myinstants](https://www.myinstants.com/en/index/es/) en España desde el MX Creative Keypad, en macOS.
 
 ## Instalación
 
