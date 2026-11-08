@@ -18,9 +18,9 @@ Si personalizaste el icono de la tecla anteriormente, restablece el icono predet
 
 ## Cómo funciona
 
-El plugin obtiene la primera página de [tendencias de Myinstants en España](https://www.myinstants.com/en/index/es/), guarda los enlaces en memoria durante una hora y descarga un audio al azar en cada reproducción. Utiliza `afplay` y la salida de audio del Mac. No incluye sonidos.
+El plugin obtiene la primera página de [tendencias de Myinstants en España](https://www.myinstants.com/en/index/es/), guarda los enlaces durante una hora y descarga un audio al azar la primera vez que se reproduce; después lo sirve desde `~/Library/Caches/SpanishMemesKeypad`. Si la web responde 429, 403 o 503, pausa las peticiones según `Retry-After` (una hora por defecto) y usa la caché mientras tanto. Utiliza `afplay` y la salida de audio del Mac. No incluye sonidos.
 
-La integración lee la página web, no la API; cambios en la página o bloqueos de red pueden impedir su funcionamiento. Las [condiciones de Myinstants](https://www.myinstants.com/en/terms_of_use.html) restringen las peticiones automatizadas; hay que aclarar el acceso con el proveedor antes de distribuir o utilizar esta integración.
+La integración lee la página web, no la API; cambios en la página o bloqueos de red pueden impedir su funcionamiento.
 
 ## Desarrollo y releases
 
