@@ -6,7 +6,7 @@ Un botón para reproducir un sonido aleatorio de las tendencias de Myinstants en
 
 Requiere macOS, conexión a internet, Logi Options+ con Logi Plugin Service 6.4 o posterior y un dispositivo compatible.
 
-1. Descarga `SpanishMemes_<versión>.lplug4` de la [última release](https://github.com/robertohuertasm/spanish-memes-keypad-plugin/releases/latest).
+1. Descarga `SpanishMemes_<versión>.lplug4` de la [última release](https://github.com/robertohuertasm/spanish-memes-logi-plugin/releases/latest).
 2. Abre el archivo para instalarlo con Logi Options+.
 3. En Options+, arrastra **Spanish Memes → Meme aleatorio** a una tecla.
 
@@ -14,7 +14,7 @@ Pulsa para reproducir. Mientras suena, las pulsaciones adicionales se ignoran. M
 
 Si personalizaste el icono de la tecla anteriormente, restablece el icono predeterminado en el editor de iconos de Options+ para ver el del plugin.
 
-[Instrucciones web](https://robertohuertasm.github.io/spanish-memes-keypad-plugin/).
+[Instrucciones web](https://robertohuertasm.github.io/spanish-memes-logi-plugin/).
 
 ## Cómo funciona
 
