@@ -29,11 +29,11 @@ Requiere .NET 10 y el paquete LogiPluginApi. Para comprobar y empaquetar:
 ```sh
 dotnet run --project probes/Probe.csproj -- --behavior
 dotnet build src/SpanishMemesPlugin.csproj -c Release
-logiplugintool pack build/Release SpanishMemes_0.1.3.lplug4
-logiplugintool verify SpanishMemes_0.1.3.lplug4
+logiplugintool pack build/Release SpanishMemes_0.1.4.lplug4
+logiplugintool verify SpanishMemes_0.1.4.lplug4
 ```
 
-Actualiza la versión de `package/metadata/LoupedeckPackage.yaml` y sube una etiqueta coincidente, por ejemplo `v0.1.3`. El flujo de release comprueba el comportamiento, compila, empaqueta y publica el archivo `.lplug4`.
+Actualiza la versión de `package/metadata/LoupedeckPackage.yaml` y sube una etiqueta coincidente, por ejemplo `v0.1.4`. El flujo de release comprueba el comportamiento, compila, empaqueta y publica el archivo `.lplug4`.
 
 Los diagnósticos están en `~/Library/Application Support/Logi/LogiPluginService/Logs/plugin_logs/SpanishMemes.log`.
 
